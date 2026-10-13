@@ -5,23 +5,19 @@
 // short : -32768 ... 32767
 using namespace std;
 
+int get_random_number(int total) {
+
+	return rand() % (total +1) ;
+}
+
+
 int main() {
-
-	int min = 2'000'000'000;
-	int max = -1;
-	for (int i = 0; i < 100'000; i++) {
-
-		int n = rand();
-
-		if (n > max) {
-			max = n;
-		}
-		if (n < min) {
-			min = n;
-		}
+	int total = 10;
+	int count = total * 2;
+	for (int i = 0; i < 33; i++) {
+		cout << get_random_number() << " ";
 	}
-	cout << "Max random value: " << max << endl;
-	cout << "Min random value: " << min;
+	
 
 	return 0;
 }
